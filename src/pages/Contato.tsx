@@ -9,7 +9,7 @@ export const ContatoPage: React.FC = () => {
             <main className="flex-grow container mx-auto p-4">
                 <section>
                     <h2 className="text-2xl font-bold text-center my-5" id="title">Fale Conosco</h2>
-                    <ContactForm /> {/* Use o componente de formulário */}
+                    <ContactForm /> 
                 </section>
             </main>
             <Footer />
