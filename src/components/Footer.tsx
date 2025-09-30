@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 export const Footer: React.FC = () => {
-    return (
-        <footer className="bg-primary text-white p-5 text-center mt-auto">
-            <p>&copy; 2025 ConectaHC</p>
-        </footer>
-    );
+  return (
+    <footer className="bg-white shadow-inner p-4 text-center mt-6">
+      <p className="text-gray-600 text-sm">&copy; 2025 ConectaHC</p>
+    </footer>
+  );
 };

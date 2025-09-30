@@ -1,11 +1,11 @@
-import React from 'react';
-import { Navbar } from './Navbar';
+import React from "react";
+import { Navbar } from "./Navbar";
 
 export const Header: React.FC = () => {
-    return (
-        <header className="bg-primary text-white p-5 text-center">
-            <h1 className="text-3xl font-bold mb-2">ConectaHC</h1>
-            <Navbar />
-        </header>
-    );
+  return (
+    <header className="bg-white shadow p-6 text-center mb-6">
+      <h1 className="text-3xl font-bold text-gray-800 mb-3">ConectaHC</h1>
+      <Navbar />
+    </header>
+  );
 };

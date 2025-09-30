@@ -50,7 +50,7 @@ export const ContactForm: React.FC = () => {
             ></textarea>
             {errors.mensagem && <p className="text-red-500 text-sm">{errors.mensagem.message}</p>}
 
-            <button type="submit" className="font-principal font-bold text-base bg-primary text-white p-3 border-none rounded-lg cursor-pointer transition-all duration-300 hover:bg-secondary hover:translate-y-[-2px]">
+            <button type="submit"className="font-principal font-bold text-base bg-blue-600 text-white p-3 rounded-lg cursor-pointer shadow-md transition duration-300 ease-in-out hover:bg-blue-700 hover:shadow-lg active:scale-95 focus:outline-none focus:ring-4 focus:ring-blue-300">
                 Enviar
             </button>
         </form>
