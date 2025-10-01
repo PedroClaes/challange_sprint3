@@ -1,5 +1,5 @@
-import React from 'react';
-import { useForm,  type SubmitHandler } from 'react-hook-form';
+import React, { useState } from 'react';
+import { useForm, type SubmitHandler } from 'react-hook-form';
 
 interface FormData {
     nome: string;
@@ -9,11 +9,12 @@ interface FormData {
 
 export const ContactForm: React.FC = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>();
+    const [enviado, setEnviado] = useState(false);
 
     const onSubmit: SubmitHandler<FormData> = (data) => {
         console.log("Formulário enviado:", data);
-        alert("Formulário enviado com sucesso!");
-        reset();
+        setEnviado(true); // ativa mensagem de sucesso
+        reset(); // limpa o formulário
     };
 
     return (
@@ -50,9 +51,14 @@ export const ContactForm: React.FC = () => {
             ></textarea>
             {errors.mensagem && <p className="text-red-500 text-sm">{errors.mensagem.message}</p>}
 
-            <button type="submit"className="font-principal font-bold text-base bg-blue-600 text-white p-3 rounded-lg cursor-pointer shadow-md transition duration-300 ease-in-out hover:bg-blue-700 hover:shadow-lg active:scale-95 focus:outline-none focus:ring-4 focus:ring-blue-300">
+            <button
+                type="submit"
+                className="font-principal font-bold text-base bg-blue-600 text-white p-3 rounded-lg cursor-pointer shadow-md transition duration-300 ease-in-out hover:bg-blue-700 hover:shadow-lg active:scale-95 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            >
                 Enviar
             </button>
+
+            {enviado && <p className="text-green-500 text-sm mt-2">Mensagem enviada com sucesso!</p>}
         </form>
     );
 };
